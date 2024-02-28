@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    line-height: normal;
+    font-family: Rubik, sans-serif;
+    font-style: normal;
+    color: aliceblue;
+    background-color: #1e1e1e;
+}
+
+table{
+    height: 725px;
+}
+
+p{
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 2;
+    text-shadow: 1px 1px 2px rgb(8, 28, 89);
+}
+
+/*============ПЕРВАЯ КОЛОНКА============*/
+
+.info{
+    background-image: url("/resource/bg-img-1.png");
+    background-origin: border-box;
+    /* background-position: center; */
+    width: 50%;
+    border-right: 1px solid aliceblue;
+    padding: 0px 30px 0px 30px;
+}
+
+.column-text{
+    display: flex;
+    gap: 40px;
+    text-align: justify;
+}
+
+#introduction{
+    font-family: Roboto Mono, sans-serif;
+    font-size: 20px;
+    color: azure;
+    flex: 1;
+}
+
+#activity{
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    color: antiquewhite;
+    flex: 1;
+}
+
+#activity > h3 {
+    color: rgb(183, 123, 55);
+}
+
+#biography{
+    font-family: Rubik, sans-serif;
+    font-size: 12px;
+    color: aliceblue;
+    flex: 1;
+}
+
+/*============ВТОРАЯ КОЛОНКА============*/
+
+.img-block{
+    background-color: #1e1e1e;
+}
+
+img{
+    border-radius: 15%;
+}
+
+.img-block {
+    position: relative;
+    
+}
+
+.img-block img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8; /* Прозрачность */
+    width: 300px; 
+    height: 300px;
+    
+}
+
+#Leon-Re4 {
+    top: 190px; /* Чтобы они были немного смещены друг относительно друга */
+    left: 190px;
+}
+
+#Leon-Vendetta {
+    top: 380px;
+    left: 380px;
+}
+
+.umbrella-logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation: moveAndRotate 10s linear infinite;
+}
+
+@keyframes moveAndRotate {
+    0% {
+        top: 0;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    33.33% {
+        top: calc(100vh - 100px); /* Перемещение до нижнего края */
+        transform: rotate(120deg);
+        opacity: 0.5; /* Изменение прозрачности */
+    }
+    66.66% {
+        top: 0; /* Возвращение в начальное положение */
+        transform: rotate(240deg);
+        opacity: 1; /* Возврат прозрачности */
+    }
+    100% {
+        transform: rotate(360deg); /* Завершение вращательного движения */
+    }
+}
